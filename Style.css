@@ -1,155 +1,122 @@
+body{
+    margin:0;
+    font-family: sans-serif;
+    background-image: url("https://img.freepik.com/free-photo/cartoon-landscape-tropical-island_23-2151724107.jpg?size=626&ext=jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    min-width: 1000px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
 .header{
-    background-color:lightblue;
-    color:black;
-    display:flex;
+    width:80%;
+    /* border:1px solid black; */
+    padding: 0.5em 5em ;
+    margin:0 auto;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: lightblue;
     flex-wrap: wrap;
-    padding:10px 150px;
-    box-sizing:border-box;
-    min-width:100%;
-    margin:0 auto;
-
-    
 }
 
 .left{
-    padding-left: 10px;
-    flex:1 1 50%;
-    
+    width:50%;
+    font-weight: bold;
+    color:black;
 }
-
+    
 .navbar{
-    display:flex;
-    gap:10px;
-    flex:1 1 40%;
-    padding-right: 0;
-    box-sizing: border-box;
+    /* border:1px solid black; */
+    padding-right: 1em;
+    width:50%;
+    display: flex;
     justify-content: flex-end;
-
-    
+    min-width: 300px;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: black;
+.navbar a{
+        text-decoration: none;
+        color:black;
+        /* border:1px solid black; */
+        margin-left: 1em;
+        
 }
-
 
 .box3{
-    display:flex;
-    flex:1 1 50%;
-    flex-direction: column;
-    max-width: 450px;
-
- 
-}
-
-.box3 .Dleft{
-    flex:1 1 50%; /* Take 100% width, wrapping to the next line */
-    box-sizing: border-box;
-    text-align: center; /* Center the text horizontally */
-    margin: 0;
-   /* Optional: Add padding for better spacing */
-    text-align: left;
-}
-
-.box3 .para{
-    flex:1 1 100%; /* Take 100% width, wrapping to the next line */
-    box-sizing: border-box;
-    text-align: center; /* Center the text horizontally */
-    margin-top: 5px;
-    text-align: left;/* Optional: Add padding for better spacing */
-    width: 500px;
+    width:60%;   
 }
 
 .box4{
-    box-sizing: border-box; 
-    width:450px;
-    flex:1 1 30%;
+    width:40%;
     display:flex;
-    justify-content: flex-start;
-    transition:transform 1s;
-    
+    justify-content: center;
+    padding-left: 8em;;
+    /* border:1px solid black; */
 }
-button{
-    background-color:rgb(0, 157, 255);
-    border-radius: 20px;
-    width:100px;
-    text-align: center;
-    height:30px;
-    border-color: black;
+.box4 img{
+    /* border:1px solid black; */
+    max-width:100%;
+    flex-shrink: 0em;
+    /* padding-left: 5em;     */
+    min-width: 20vw;
+    height:auto;
+    object-fit: contain;
 }
-
-button:hover{
-    animation: extend 1s ease-in-out forwards;
-}
-
-@keyframes extend{
-    from{ width:100px;}
-    to{width:300px;}
-}
-
-/* button:hover{
-    animation: transfer 0.5s ease-in-out forwards;
-}
-
-@keyframes transfer{
-    from{ transform:translateX(0);}
-    to{transform:translateX(80px);}
-} */
-
-button a{
-    color:White;
-    text-decoration: none;
-}
-
-img{
-    max-width: 350%;
-}
-
-/* .box4 img:hover{
-    transform:scale(2,2);
-} */
-
 
 .mid{
-    background-color:lightgrey;
-    padding:15px;
-    box-sizing: border-box;
-    
+    background-color:lightgrey; 
+    width:80%;
+    margin:0 auto; 
+    padding:0.05em 5em 0.05em; 
 }
 
 .images{
     display:flex;
     justify-content: center;
-    gap:10px;
+    gap:1em;
     perspective:1000px;
+    
 }
 
 .images .img{
-    max-width:200px;
-    text-align: center;
+    max-width:30%;
+    text-align: center ;
+    /* border:1px solid black; */
     animation-fill-mode:forwards;
-    
+}
+
+.img img{
+    text-align: center;
+}
+
+.box4 img:hover{
+    animation: scaling 0.25s ease-in-out forwards;
+}
+
+@keyframes scaling{
+    from{transform:scale(1,1);}
+    to{transform:scale(1.25,1.25);}
 }
 
 .img:hover img{
     animation: rotation 2s ease-in-out forwards;
 }
-
 @keyframes rotation{
-    from { transform:rotatex(0deg )  ;}
-    to { transform:rotatex(360deg )  ; }
+    from { transform:rotatey(0deg ) ;}
+    to { transform:rotatey(360deg ) ; }
 }
-
-
 
 .third{
     background-color: beige;
     text-align: center;
     font-style: italic;
-    padding:15px;
+    padding:0.3em;
+    width:80%;
+    margin:0 auto;
     text-shadow: 1px grey;
  
 }
@@ -157,30 +124,37 @@ img{
     font-weight: bold;
     font-style: normal;
     text-align: center;
-    padding-left: 183px;
-    margin:0px;
+    padding-left: 12em;
+    margin:0em;
 }
 
 .last{
     display:flex;
-    background-color: rgb(0, 136, 255);
+    background-color: rgb(100, 100, 100);
     color:white;
-    padding:0px 10px 0px 40px;
+    padding:0em 1em ;
     align-items: center;
     justify-content: space-around;
-    width:600px;
-    margin:20px auto;
-    border-radius: 20px 0px;
+    width:40%;
+    margin:0.5em auto;
+    border-radius: 1.5em 0em;
+    border: 1px solid black;
 }
 
 .Lleft{
-    max-width:400px;
+    max-width:80%;
 }
-body{
-    margin:0px 150px 0px 150px;
-    background-image: url("https://img.freepik.com/free-photo/cartoon-landscape-tropical-island_23-2151724107.jpg?size=626&ext=jpg");
-    background-repeat:no-repeat;
-    background-size: cover;
+
+button a{
+    color:White;
+    text-decoration: none;
+}
+
+button{
+    background-color: rgb(0, 119, 255);
+    border-radius: 1em;
+    height:2em;
+    width:8em;
 }
 
 button:hover{
@@ -191,7 +165,3 @@ a:hover{
     color:purple;
 }
 
-/* img, .img{
-    display:block;
-    max-width: 100%;
-} */
